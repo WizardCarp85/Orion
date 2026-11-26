@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { height: 100%; margin: 0; overflow: hidden; background: #000; }
+body { font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; user-select: none; }
+canvas { image-rendering: auto; }
+.glow-text { text-shadow: 0 0 12px rgba(160, 230, 255, 0.8), 0 0 32px rgba(120, 180, 255, 0.5); }
+@keyframes fadein { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.fade-in { animation: fadein 0.4s ease-out both; }
+@keyframes blink { 50% { opacity: 0; } }
+.blink { animation: blink 1s steps(1) infinite; }
+@keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+.floaty { animation: floaty 3s ease-in-out infinite; }
+@keyframes toast { 0% { opacity: 0; transform: translate(-50%, -6px); } 8% { opacity: 1; transform: translate(-50%, 0); } 85% { opacity: 1; } 100% { opacity: 0; } }
+.toast-anim { animation: toast 3.2s ease-out forwards; }
